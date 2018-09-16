@@ -13,7 +13,7 @@ import java.util.*;
 @Component
 public class FileUtils {
 
-    public Map<String, Pilot> value(String[] lines) {
+    public Map<String, Pilot> createMapPilot(String[] lines) {
         Map<String, Pilot> pilots = new HashMap<>();
         Arrays.stream(lines).skip(1).forEach(line -> {
             Map<String, String> columnName = columnName(line);

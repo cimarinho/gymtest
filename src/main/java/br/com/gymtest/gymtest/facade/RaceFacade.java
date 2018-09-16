@@ -16,7 +16,7 @@ public class RaceFacade {
     private FileUtils fileUtils;
 
     public Race read(String [] file){
-        Map<String, Pilot>  pilos = fileUtils.value(file);
+        Map<String, Pilot>  pilos = fileUtils.createMapPilot(file);
         List<Pilot> pilots = new ArrayList<>();
         pilos.forEach((key, value) ->{
             value.calculateBestLap();
